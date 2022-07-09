@@ -1,0 +1,1 @@
+// Este fichero sirve para almacenar la información en el localStorage del navegador
