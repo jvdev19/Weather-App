@@ -1,30 +1,35 @@
-/* 
-
-INDEX.JS
-
-Este es el archivo encargado de arrancar la app.
-Vamos a capturar el evento DOMContentLoaded cuando la app sea cargada
-
-Ahora, el evento DOMContentLoaded escuchará a nuestra función fetchWeather, que será
-la que arrancará la funcionalidad principal de la app.
-
-No obstante, la lógica que hará las llamadas a la API estarán en el fichero Weather.js
-
- // > No se requieren los .js al final y los corchetes son para traernos todos los métodos
-// >> La sintaxis de los corchetes son para que la clase ya esté instanciada. De tal manera que ya podamos utilizar todos los métodos
-// y propiedades sin tener que llamar a Weather, haciendo Weather.propiedad o Weather.metodo 
-
-*/
+// Este es el archivo encargado de arrancar la app.
 const { Weather } = require('./Weather');
+const { UI } = require('./UI');
 require ('./assets/css/skins/bootstrap.minty.min.css');
 require ('./assets/css/app.css');
 
-/* Test, luego borrar */
 const weather = new Weather('London', 'uk');
+const ui = new UI();
 
 async function fetchWeather() {
     const data = await weather.getWeather();
     console.log(data);
+    ui.render(data);
 }
+
+document.getElementById('weather-change-btn').addEventListener('click', function (e) {
+    
+    // Cogemos los nuevos valores
+    const city = document.getElementById('city').value;
+    const countryCode = document.getElementById('countryCode').value;
+
+    // Cambiamos la localización
+    
+    // 1. Le pasamos los nuevos valores al objeto instanciado, el cual tenía un método para cambiar sus propiedades
+    //    city y countryCode. 
+    weather.changeLocation(city, countryCode); 
+    
+    // 2. Volvemos a ejecutar el método que llama a la API, con los valores del objeto cambiados.
+    fetchWeather();
+
+    // Nos aseguramos de que no recargue la página
+    e.preventDefault();
+});
 
 document.addEventListener('DOMContentLoaded', fetchWeather);

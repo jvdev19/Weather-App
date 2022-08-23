@@ -1,26 +1,26 @@
-const path = require('path'); // 3
-const HtmlWebpackPlugin = require('html-webpack-plugin');// 7
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
-module.exports = { // 1
-    entry: './src/app/index.js', // 2
-    stats: { children: true },
+module.exports = {
+    entry: './src/app/index.js',
+    stats: { children: true }, // Mejor debug
     output: {
-        path: path.join(__dirname, 'dist'),  // >> 3
+        path: path.join(__dirname, 'dist'),
         filename: 'bundle.js'
     },
-    devServer: {// 4
+    devServer: {
         port:3000
     },
-    module: { // 5
+    module: {
         rules: [
             {
                 test:/\.css$/,
-                use: ['style-loader', 'css-loader'] // 6
+                use: ['style-loader', 'css-loader']
             }
         ]
     },
-    plugins:[// 7
+    plugins:[
         new HtmlWebpackPlugin({
                 template: './src/index.html'
             }
