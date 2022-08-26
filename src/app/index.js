@@ -22,7 +22,6 @@ require ('./assets/css/app.css');
 const store = new Store();
 const {city, countryCode} = store.getLocationData(); // >> Estos valores los pasamos al método que hace la consulta a la API, del objeto instanciado guardado en la constante weather.
 
-
 const weather = new Weather(city, countryCode); // >> Aquí ponemos la localización por defecto. Una mejora chula sería obtener la localización del dispositivo desde el que se muestra la app y setearlo como localización por defecto. 
 const ui = new UI();
 

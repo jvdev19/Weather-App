@@ -5,7 +5,7 @@ export class Store {
         this.city;
         this.countryCode;
         this.defaultCity = 'London'; // >> Definimos la ciudad por defecto
-        this.defaultCountry = 'uk'; // >> Definimos 
+        this.defaultCountry = 'uk'; // >> Definimos
     }
 
     getLocationData(){ // >> Recupera y muestra los valores almacenado en el navegador.
