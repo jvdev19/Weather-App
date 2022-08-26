@@ -1,4 +1,6 @@
 // Este fichero será el encargado de pedir la información a la API que vamos a utilizar
+// ==============================================================================================
+
 // La web de la que sacamos la API es openweathermap.org, que proporciona varias APIS (de pago y gratis)
 // la que nosotros vamos a utilizar es una gratuita que se llama "Current Weather Data". Es importante
 // saber cuál de ellas es para mirar la doc, y por si volvemos a entrar a este proyecto pasado un tiempo.
