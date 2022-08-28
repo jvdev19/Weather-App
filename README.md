@@ -32,7 +32,7 @@ de diferentes ciudades del mundo.
 
 **4. ANOTACIONES**
 
-**4.1. Comandos:** 
+**4.1. CLI:** 
 
 - *npm run dev*: Pone en marcha el servidor en modo desarrollo. Nos permite ver los cambios en vivo en el navegador, sin necesidad de refrescar. 
 
@@ -45,7 +45,7 @@ Hay que tener en cuenta que para que npm sepa que webpack va a gestionar estas t
 
 <br><br>
 
-  **4.2. Fichero package.json** 
+  **4.2. PACKAGE.JSON** 
   
   Al ser webpack un módulo de node, los propios comandos de arranque de servidor y compilado de npm, tenemos la posibilidad de modificar el package.json para indicarle los scripts que tiene que ejecutar npm cuando le pidamos que compile, o que arranque el servidor de desarrollo en localhost.
 
