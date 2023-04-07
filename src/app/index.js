@@ -12,11 +12,9 @@ require ('./assets/css/app.css');
 
 // Instancio los objetos, guardándolos en constantes.
 
-// Al ser la primera vez que veo esto, llama la atención. Es una posibilidad más que 
-// nos ofrece la sintaxis de los corchetes:
+// Al ser la primera vez que veo esto, llama la atención. Es una posibilidad más que nos ofrece la sintaxis de los corchetes:
 
-// Guardo las propiedades que se obtienen como resultado de la ejecución del método
-// getLocationData, que pertenece al objeto instanciado que se guarda en la constante store:
+// Guardo las propiedades que se obtienen como resultado de la ejecución del método getLocationData, que pertenece al objeto instanciado que se guarda en la constante store:
 
 const store = new Store();
 const {city, countryCode} = store.getLocationData(); // >> Estos valores los pasamos al método que hace la consulta a la API, del objeto instanciado guardado en la constante weather.
