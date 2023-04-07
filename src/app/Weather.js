@@ -6,11 +6,9 @@
 // saber cuál de ellas es para mirar la doc, y por si volvemos a entrar a este proyecto pasado un tiempo.
 
 export class Weather{
-    //constructor(city, countryCode) {
     constructor(city) {
         this.apikey = '0fcbd8f5e305923f731edf9ffae5c160';
         this.city = city;
-        //this.countryCode = countryCode;
     }
     
     async getWeather() {
@@ -29,9 +27,7 @@ export class Weather{
         return data;
     }
     
-    //changeLocation(city, countryCode){
     changeLocation(city){
         this.city = city;
-        //Sthis.countryCode = countryCode;
     }
 }
