@@ -1,8 +1,7 @@
 // Este es el archivo encargado de arrancar la app.
 // ============================================================================
 
-// Llamo a las clases JS que necesito para arrancar al app. La sintaxis ente corchetes significa "traerse la clase" así podemos instanciarla más abajo, 
-// guardándolas en constantes. 
+// Llamo a las clases JS que necesito para arrancar al app. La sintaxis ente corchetes significa "traerse la clase" así podemos instanciarla más abajo, guardándolas en constantes. 
 const { Weather } = require('./Weather');
 const { UI } = require('./UI');
 const { Store } = require('./Store');
@@ -41,8 +40,7 @@ document.getElementById('weather-change-btn').addEventListener('click', function
 
     // Cambiamos la localización
     
-    // 1. Le pasamos los nuevos valores al objeto instanciado, el cual tenía un método para cambiar sus propiedades
-    //    city y countryCode. 
+    // 1. Le pasamos los nuevos valores al objeto instanciado, el cual tenía un método para cambiar sus propiedadescity y countryCode. 
     weather.changeLocation(city, countryCode);
     store.setLocationData(city, countryCode); // >> También pasamos estos valores asignados en los campos del formulario al localStorage del navegador, a través del método del que dispone el objeto instanciado store.
     
