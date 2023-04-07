@@ -9,7 +9,6 @@ const { Store } = require('./Store');
 // Incrusto los CSS en el HTML compilado final, a través de los módulos de webpack que he instalado
 require ('./assets/css/skins/bootstrap.minty.min.css');
 require ('./assets/css/app.css');
-
 // Instancio los objetos, guardándolos en constantes.
 
 // Al ser la primera vez que veo esto, llama la atención. Es una posibilidad más que nos ofrece la sintaxis de los corchetes:
