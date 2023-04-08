@@ -20,7 +20,8 @@ export class Weather{
 
 
         // URL MODIFICADA DESDE LA PRIMERA VERSIÓN PARA QUE SAQUE EL FORECAST DE 5 DAYS
-        const URI = `https://api.openweathermap.org/data/2.5/forecast?q=${this.city},${this.country}&appid=${this.apikey}&units=metric&cnt=5`;
+        //const URI = `https://api.openweathermap.org/data/2.5/forecast?q=${this.city},${this.country}&appid=${this.apikey}&units=metric&cnt=5    `;
+        const URI = `https://api.openweathermap.org/data/2.5/forecast?q=${this.city},${this.country}&appid=${this.apikey}&units=metric`;
         
         const response = await fetch(URI);
         const data = await response.json();
