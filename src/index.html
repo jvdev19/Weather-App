@@ -14,21 +14,24 @@
 
         <!-- Info -->
         <div class="card">
-            <h2 class="h3" id="weather-location"></h2>
-            <h3 class="h3" id="weather-description"></h3>
-            <h3 class="h3" id="weather-string"></h3>
+            <h2 class="h5" id="dt_txt"></h5>
+            <h3 class="h4" id="weather-location"></h3>
+            <h3 class="h4" id="weather-description"></h3>
+            <h4 class="h3" id="weather-string"></h4>
 
             <ul>
                 <li id="weather-humidity"></li>
                 <li id="weather-wind"></li>
             </ul>
+            <div id="five-days-forecast">
+
+            </div>
         </div>
 
         <!-- Form -->
         <div class="card">
             <form id="weather-form">
                 <input type="text" class="form-control"  id="city" placeholder="City" autofocus>
-                <input type="text" class="form-control" id="countryCode">
                 <button class="btn-block btn-primary" id="weather-change-btn">
                     Show weather data
                 </button>
